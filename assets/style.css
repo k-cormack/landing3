@@ -4,33 +4,106 @@ html {
     margin: 0;
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #777;
+    /* background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background: no-repeat center center fixed; */
 }
 
 .bgimg-1,
 .bgimg-2,
 .bgimg-3 {
     position: relative;
-    opacity: 0.65;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
 
+.cb-slideshow {
+    /* position: fixed; */
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+
+/* .cb-slideshow:after { 
+    content: '';
+    background: transparent url(/images/download.png) repeat top left; 
+} */
+
+.img-span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 18s linear infinite 0s;
+}
+
+.cb-slideshow li:nth-child(1) span {
+    background-image: url("http://unsplash.it/1000/800")
+}
+
+.cb-slideshow li:nth-child(2) span {
+    background-image: url("http://unsplash.it/800/600");
+    animation-delay: 6s;
+}
+
+.cb-slideshow li:nth-child(3) span {
+    background-image: url("http://unsplash.it/1100/900");
+    animation-delay: 12s;
 }
 
 .bgimg-1 {
-    background-image: url("/images/derriese42.JPG");
-    min-height: 100%;
+    background-image: url("/images/SnoPlow2.png");
+    min-height: 600px;
 }
 
+
 .bgimg-2 {
-    background-image: url("/images/Silverado1.JPG");
-    min-height: 400px;
+    background-image: url("/images/MyTunes.png");
+    min-height: 600px;
 }
 
 .bgimg-3 {
-    background-image: url("/images/leavealready.JPG");
-    min-height: 400px;
+    background-image: url("/images/KEEPR.png");
+    min-height: 100%;
+}
+
+.border:hover {
+    cursor: pointer;
+    background-color: black !important;
+    color: white !important;
+}
+
+.name-head {
+    /* position: absolute; */
+    /* margin-top: 3px; */
+    /* width: 100%; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.name-span {
+    color: #000;
+    font-size: 1.5vw;
+    letter-spacing: 10px;
+}
+
+.name-span:hover {
+    background-color: #333;
+    color: white;
 }
 
 .caption {
@@ -40,6 +113,8 @@ html {
     width: 100%;
     text-align: center;
     color: #000;
+    opacity: 1;
+    z-index: 1;
 }
 
 .caption span.border {
@@ -57,20 +132,22 @@ h3 {
     color: #111;
 }
 
+span,
+p {
+    font-family: "Sans-Forgetica";
+}
+
 #navbar {
-    z-index: 1;
-    background-color: #333;
+    background-color: ivory;
+    z-index: 5;
     position: fixed;
     top: 0;
     width: 100%;
-    display: block;
     transition: top 0.3s;
 }
 
 #navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 15px;
     text-decoration: none;
@@ -78,16 +155,72 @@ h3 {
 }
 
 #navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #333;
+    color: white;
 }
 
-    /* Turn off parallax scrolling for tablets and phones */
-    @media only screen and (max-device-width: 1024px) {
+#navbar img {
+    max-height: 50px;
+    margin-top: 5px;
+}
 
-        .bgimg-1,
-        .bgimg-2,
-        .bgimg-3 {
-            background-attachment: scroll;
+.logos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@font-face {
+    font-family: "Sans-Forgetica";
+    src: url("/assets/fonts/SansForgetica-Regular.otf") format("opentype");
+}
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+
+    16% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+
+    32% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 0
     }
 }
+
+@media screen and (max-width: 1140px) {
+    .cb-slideshow li div h3 {
+        font-size: 140px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cb-slideshow li div h3 {
+        font-size: 80px
+    }
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+/* @media only screen and (max-device-width: 1024px) {
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: scroll;
+    }
+} */

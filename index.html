@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" class=" js flexbox flexboxlegacy no-touch draganddrop rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent svg inlinesvg adownload boxsizing">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -10,40 +10,85 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
 
 <body>
-    <div id="navbar" style="top: 0px">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-    </div>
-    <div class="bgimg-1">
-        <div class="caption">
-            <span class="border">SCROLL DOWN</span>
+    <div id="navbar" style="top: 0" class="container-fluid">
+        <div class="row">
+            <div class="col-3 name-head">
+                <span class="name-span">KEITH CORMACK</span>
+            </div>
+            <div class="col-6 logos">
+                <img src="./logos/JS.png">
+                <img src="./logos/vue-300x300.png">
+                <img src="./logos/sql-logo.png">
+                <img src="./logos/nodejs_logo.png">
+                <img src="./logos/css-logo.png">
+                <img src="./logos/cs.png">
+                <img src="./logos/dotnet-core.png">
+            </div>
+            <div class="col-3 nav-buttons">
+                <a href="#home">ABOUT</a>
+                <a href="#news">STUFF</a>
+                <a href="#contact">CONTACT</a>
+            </div>
         </div>
     </div>
 
+    <div class="caption">
+        <span class="border" onClick="document.querySelector('#scroll-point').scrollIntoView({behavior: 'smooth'});">WEB DEVELOPER</span>
+    </div>
+    <ul class="cb-slideshow">
+        <li>
+            <span class="img-span">Image 01</span>
+        </li>
+        <li><span class="img-span">Image 02</span>
+        </li>
+        <li><span class="img-span">Image 03</span>
+        </li>
+    </ul>
+
     <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-        <h3 style="text-align:center;">Parallax Demo</h3>
-        <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the
-            foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed
-            posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit
+        <h3 id="about" style="text-align:center;">How I Got <u>HERE</u></h3>
+        <p> Nascetur per nec posuere turpis, lectus nec libero turpis nunc at,
+            sed
+            posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis
+            blandit
             dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur
             aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl
             dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio.
-            Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem
-            mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante
+            Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula
+            lorem
+            mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas
+            ante
             augue etiam maecenas, porta porttitor placerat leo.</p>
+    </div>
+    <span id="scroll-point"></span>
+
+    <div class="bgimg-1">
+        <div class="caption">
+            <a href="https://cormack-snoplow.herokuapp.com/" style="text-decoration: none">
+                <span class="border" style="background-color: #ca3c3c;font-size:25px;color: white;text-shadow: black 2px 2px;">SNOPLOW</span>
+            </a>
+        </div>
+    </div>
+
+    <div style="position:relative;">
+        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+            <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+        </div>
     </div>
 
     <div class="bgimg-2">
         <div class="caption">
-            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+            <a href="https://cormack-mytunes.herokuapp.com/" style="text-decoration: none">
+                <span class="border" style="background-color:rgb(52, 206, 22);font-size:25px;color: #000;">MYTUNES</span>
+            </a>
         </div>
     </div>
 
@@ -55,19 +100,9 @@
 
     <div class="bgimg-3">
         <div class="caption">
-            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
-        </div>
-    </div>
-
-    <div style="position:relative;">
-        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-            <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-        </div>
-    </div>
-
-    <div class="bgimg-1">
-        <div class="caption">
-            <span class="border">COOL!</span>
+            <a href="https://cormack-keepr.herokuapp.com/" style="text-decoration: none">
+                <span class="border" style="background-color: #4e4f9c;text-shadow: black 2px 2px">KEEPR</span>
+            </a>
         </div>
     </div>
     <script>
@@ -77,10 +112,23 @@
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("navbar").style.top = "0";
             } else {
-                document.getElementById("navbar").style.top = "-50px";
+                document.getElementById("navbar").style.top = "-55px";
             }
             prevScrollpos = currentScrollPos;
         }
+
+        // let images = new Array('/images/derriese42.JPG', '/images/leavealready.JPG', '/images/Silverado1.JPG');
+        // let nextImage = 0;
+        // doSlideShow();
+
+        // function doSlideShow(){
+        //     if(nextImage >= images.length){nextImage = 0;}
+        //     $('.bgimg-1')
+        //     .css('background-image', 'url("'+images[nextImage++]+'")')
+        //     .fadeIn(500, function(){
+        //         setTimeout(doSlideShow, 1000);
+        //     });
+        // }
     </script>
 
 </body>
