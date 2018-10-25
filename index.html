@@ -20,10 +20,10 @@
 <body>
     <div id="navbar" style="top: 0" class="container-fluid">
         <div class="row">
-            <div class="col-3 name-head">
+            <div class="col-sm-3 name-head">
                 <span class="name-span">KEITH CORMACK</span>
             </div>
-            <div class="col-6 logos">
+            <div class="col-sm-6 logos">
                 <img src="./logos/JS.png">
                 <img src="./logos/vue-300x300.png">
                 <img src="./logos/sql-logo.png">
@@ -32,10 +32,13 @@
                 <img src="./logos/cs.png">
                 <img src="./logos/dotnet-core.png">
             </div>
-            <div class="col-3 nav-buttons">
-                <a href="#home">ABOUT</a>
-                <a href="#news">STUFF</a>
-                <a href="#contact">CONTACT</a>
+            <div class="col-sm-3 nav-buttons">
+                <!-- <a href="#home">ABOUT</a> -->
+                <!-- <a href="#news">STUFF</a> -->
+                <!-- <a href="#footer">CONTACT</a> -->
+                <div onClick="document.querySelector('#scroll-point').scrollIntoView({behavior: 'smooth'});">ABOUT</div>
+                <div onClick="document.querySelector('#stuff').scrollIntoView({behavior: 'smooth'});">STUFF</div>
+                <div onClick="document.querySelector('#footer').scrollIntoView({behavior: 'smooth'});">CONTACT</div>
             </div>
         </div>
     </div>
@@ -54,9 +57,10 @@
         </li>
     </ul>
 
-    <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;border-style: solid;margin-top:-15px;">
         <h3 id="about" style="text-align:center;">How I Got <u>HERE</u></h3>
         <p> Nascetur per nec posuere turpis, lectus nec libero turpis nunc at,
+            <span id="scroll-point"></span>
             sed
             posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis
             blandit
@@ -69,7 +73,6 @@
             ante
             augue etiam maecenas, porta porttitor placerat leo.</p>
     </div>
-    <span id="scroll-point"></span>
 
     <div class="bgimg-1">
         <div class="caption">
@@ -79,9 +82,20 @@
         </div>
     </div>
 
-    <div style="position:relative;">
+    <div style="position:relative;border-style: solid">
+        <div class="row">
+            SOME OF MY TRAINING.....
+        </div>
         <div class="page-break">
-            <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+            <a href="https://en.wikipedia.org/wiki/Special_Forces_(United_States_Army)" target="_blank">
+                <img src="/logos/sf-tab-arrow-400x400.png" alt="">
+            </a>
+            <a href="https://boisecodeworks.com/" target="_blank">
+                <img src="/logos/cw-logo-square.png" alt="">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/82nd_Airborne_Division" target="_blank">
+                <img src="/logos/82d-abn.png" alt="">
+            </a>
         </div>
     </div>
 
@@ -94,8 +108,11 @@
     </div>
 
     <div style="position:relative;">
-        <div class="page-break">
-            <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+        <div id="stuff" class="page-break">
+            <img src="/logos/768px-Boston_Bruins.svg.png" alt="">
+            <img src="/logos/rebellion.png" alt="">
+            <img src="/logos/HockeyCheckr_Logo.jpg" alt="">
+            <img src="/logos/rochester_americans.png" alt="">
         </div>
     </div>
 
@@ -108,16 +125,26 @@
     </div>
     <div id="footer" class="container-fluid">
         <div class="row vertical-center">
-            <div class="col-3 name-head">
-                <span class="name-span" onClick="document.querySelector('#scroll-point').scrollIntoView({behavior: 'smooth'});">KEITH CORMACK</span>
+            <div class="col-sm-7 name-head">
+                <span class="name-span" onClick="document.querySelector('#scroll-point').scrollIntoView({behavior: 'smooth'});">KEITH
+                    CORMACK</span>
             </div>
-            <div class="col-6">
 
-            </div>
-            <div class="col-3">
-                <a href="https://github.com/k-cormack" target="_blank">
-                <img src="/images/github-512.png" alt="">
-                </a>
+            <div id="icons" class="col-sm-5">
+                <div class="row" style="justify-content: space-evenly">
+                    <a href="mailto:k.cormack@gmail.com">
+                        <img src="/logos/gmail-512.png" alt="">
+                    </a>
+                    <a href="tel:585-485-2895">
+                        <img src="/logos/google-mobile-512.png" alt="">
+                    </a>
+                    <a href="https://github.com/k-cormack" target="_blank">
+                        <img src="/logos/github-512.png" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/in/keith-c-b67a31160/" target="_blank">
+                        <img src="/logos/if_square-linkedin_317725.png" alt="">
+                    </a>
+                </div>
 
             </div>
         </div>
@@ -126,11 +153,22 @@
     <script>
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
+            let deviceSize = window.screen.width;
+            let currentScrollPos = window.pageYOffset;
+            if (deviceSize >= 1140) {
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-60px";
+                }
             } else {
-                document.getElementById("navbar").style.top = "-55px";
+                if (prevScrollpos > currentScrollPos) {
+
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-150px";
+                }
+
             }
             prevScrollpos = currentScrollPos;
         }
