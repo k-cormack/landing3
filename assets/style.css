@@ -206,7 +206,7 @@ h4 {
 
 @font-face {
     font-family: "Sans-Forgetica";
-    src: url("/assets/fonts/SansForgetica-Regular.otf") format("opentype");
+    src: url("./assets/fonts/SansForgetica-Regular.otf") format("opentype");
 }
 
 @keyframes imageAnimation {
