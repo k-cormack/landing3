@@ -54,18 +54,18 @@ html {
 }
 
 .bgimg-1 {
-    background-image: url("./images/SnoPlow2.png");
+    background-image: url("../images/SnoPlow2.png");
     min-height: 600px;
 }
 
 
 .bgimg-2 {
-    background-image: url("./images/MyTunes.png");
+    background-image: url("../images/MyTunes.png");
     min-height: 600px;
 }
 
 .bgimg-3 {
-    background-image: url("./images/KEEPR.png");
+    background-image: url("../images/KEEPR.png");
     min-height: 100%;
 }
 
