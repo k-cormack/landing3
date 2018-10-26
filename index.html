@@ -33,9 +33,6 @@
                 <img src="./logos/dotnet-core.png">
             </div>
             <div class="col-sm-3 nav-buttons">
-                <!-- <a href="#home">ABOUT</a> -->
-                <!-- <a href="#news">STUFF</a> -->
-                <!-- <a href="#footer">CONTACT</a> -->
                 <div onClick="document.querySelector('#scroll-point').scrollIntoView({behavior: 'smooth'});">ABOUT</div>
                 <div onClick="document.querySelector('#stuff').scrollIntoView({behavior: 'smooth'});">STUFF</div>
                 <div onClick="document.querySelector('#footer').scrollIntoView({behavior: 'smooth'});">CONTACT</div>
@@ -47,7 +44,7 @@
         <span id="web-dev-span" class="border" onClick="document.querySelector('#scroll-point').scrollIntoView({behavior: 'smooth'});">WEB
             DEVELOPER</span>
     </div>
-    <ul class="cb-slideshow">
+    <ul class="cb-slideshow" style="list-style: none">
         <li>
             <span class="img-span">Image 01</span>
         </li>
@@ -182,19 +179,6 @@
             }
             prevScrollpos = currentScrollPos;
         }
-
-        // let images = new Array('/images/derriese42.JPG', '/images/leavealready.JPG', '/images/Silverado1.JPG');
-        // let nextImage = 0;
-        // doSlideShow();
-
-        // function doSlideShow(){
-        //     if(nextImage >= images.length){nextImage = 0;}
-        //     $('.bgimg-1')
-        //     .css('background-image', 'url("'+images[nextImage++]+'")')
-        //     .fadeIn(500, function(){
-        //         setTimeout(doSlideShow, 1000);
-        //     });
-        // }
     </script>
 
 </body>
