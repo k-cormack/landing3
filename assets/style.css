@@ -94,9 +94,7 @@ html {
 }
 
 .name-head {
-    display: flex;
     text-align: center;
-    align-items: center;
 }
 
 .name-span {
