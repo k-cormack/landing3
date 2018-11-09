@@ -33,13 +33,13 @@
                 <img src="./logos/dotnet-core.png">
             </div>
             <div class="col-sm-3 nav-buttons">
-                <div onClick="document.querySelector('#scroll-point').scrollIntoView({behavior: 'smooth'});">ABOUT</div>
+                <div onClick="document.querySelector('#about').scrollIntoView({behavior: 'smooth'});">ABOUT</div>
                 <div onClick="document.querySelector('#stuff').scrollIntoView({behavior: 'smooth'});">STUFF</div>
                 <div onClick="document.querySelector('#footer').scrollIntoView({behavior: 'smooth'});">CONTACT</div>
             </div>
         </div>
     </div>
-
+    <span id="top"></span>
     <div class="caption">
         <span id="web-dev-span" class="border" onClick="document.querySelector('#scroll-point').scrollIntoView({behavior: 'smooth'});">WEB
             DEVELOPER</span>
@@ -54,16 +54,19 @@
         </li>
     </ul>
 
-    <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;border-style: solid;margin-top:-15px;">
-        <h3 id="about" style="text-align:center;">How I Got <u>HERE</u></h3>
+    <div class="about">
+        <h3 style="text-align:center;">How I Got <u>HERE</u></h3>
         <hr>
-        <span id="scroll-point"></span>
         <h5 style="line-height: 1.6">Some folks have a few chapters in their life, and after closing a few of my own, I
             found myself (once again) asking "what do I want to do when I grow up?". Throughout my life, I have been
             intrigued with technology and gadgets, and was one of those kids who frequently took my toys apart to
+            <span id="about"></span>
             figure out how they work - which I still do to this day (only my toys have become more complex....and
             expensive!). With support and encouragement from my family, I have decided to pursue a career as a Web
             Developer, ready to continue my learning, tinkering, and problem-solving!</h5>
+        <div class="row more-click">
+            <span onClick="document.querySelector('#training').scrollIntoView({behavior: 'smooth'});">MORE......</span>
+        </div>
     </div>
 
     <div class="bgimg-1">
@@ -90,6 +93,9 @@
             <a href="https://en.wikipedia.org/wiki/82nd_Airborne_Division" target="_blank">
                 <img src="./logos/82d-abn.png" alt="">
             </a>
+        </div>
+        <div class="row more-click">
+            <span id="training" onClick="document.querySelector('#regular-person').scrollIntoView({behavior: 'smooth'});">MORE......</span>
         </div>
     </div>
 
@@ -121,6 +127,9 @@
                 <img src="./logos/rochester_americans.png" alt="">
             </a>
         </div>
+        <div class="row more-click">
+            <span id="regular-person" onClick="document.querySelector('#footer').scrollIntoView({behavior: 'smooth'});">MORE......</span>
+        </div>
     </div>
 
     <div class="bgimg-3">
@@ -133,7 +142,7 @@
     <div id="footer" class="container-fluid">
         <div class="row vertical-center">
             <div class="col-sm-7 name-head">
-                <span class="name-span" onClick="document.querySelector('#scroll-point').scrollIntoView({behavior: 'smooth'});">KEITH
+                <span class="name-span" onClick="document.querySelector('#top').scrollIntoView({behavior: 'smooth'});">KEITH
                     CORMACK</span>
             </div>
 
